@@ -24,6 +24,10 @@ android {
     packagingOptions {
         exclude 'LICENSE.txt'
     }
+
+    task testsRun(type: Exec) {
+        commandLine 'adb', 'shell', 'am', 'instrument', '-w', 'com.example.pope4president.espressoexample.test/android.support.test.runner.AndroidJUnitRunner'
+    }
 }
 
 dependencies {
