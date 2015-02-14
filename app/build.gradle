@@ -27,7 +27,7 @@ android {
 
     task testsRun(type: Exec) {
         executable 'sh'
-        args '-c', 'echo $ANDROID_HOME'
+        args '-c', '$ANDROID_HOME/platform-tools/adb shell am instrument -w com.example.pope4president.espressoexample.test/android.support.test.runner.AndroidJUnitRunner'
     }
 }
 
