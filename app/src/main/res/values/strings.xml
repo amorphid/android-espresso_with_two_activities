@@ -4,5 +4,7 @@
     <string name="app_name">EspressoExample</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="whats_the_haps">What\'s the haps?</string>
 
 </resources>

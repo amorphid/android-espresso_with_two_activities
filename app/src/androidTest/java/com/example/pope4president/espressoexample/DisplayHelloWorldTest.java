@@ -2,6 +2,7 @@ package com.example.pope4president.espressoexample;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -19,6 +20,9 @@ public class DisplayHelloWorldTest extends ActivityInstrumentationTestCase2<Main
     }
 
     public void testHelloWorldDisplay() {
-        onView(withId(R.id.hello_world)).check(matches(withText(R.string.hello_world)));
+        onView(withId(R.id.hello_world))
+            .perform(click());
+        onView(withId(R.id.whats_the_haps))
+            .check(matches(withText(R.string.whats_the_haps)));
     }
 }
